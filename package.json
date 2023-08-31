@@ -1,0 +1,22 @@
+{
+  "name": "14-tech-blog",
+  "version": "1.0.0",
+  "description": "* #### Due: Sept 12, 2023",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eddyK15501/tech-blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eddyK15501/tech-blog/issues"
+  },
+  "homepage": "https://github.com/eddyK15501/tech-blog",
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
