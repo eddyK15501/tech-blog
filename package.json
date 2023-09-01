@@ -19,6 +19,8 @@
   "homepage": "https://github.com/eddyK15501/tech-blog",
   "dependencies": {
     "dotenv": "^16.3.1",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "handlebars": "^4.7.8",
+    "sequelize": "^6.32.1"
   }
 }
