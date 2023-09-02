@@ -7,17 +7,17 @@ const newUsers = () => [
     password: "qwer1234",
   },
   {
-    username: "DungSlinger5",
-    email: "dirty4skin@gmail.com",
+    username: "bruised4Skin",
+    email: "DungSlinger5@gmail.com",
     password: "qwer1234",
   },
   {
-    username: "uLitlWeeZL",
-    email: "conorMcGregor@hotmail.com",
+    username: "conor_mcgregor",
+    email: "uLitlf00knWeeZl@hotmail.com",
     password: "qwer1234",
   },
 ];
 
-const seedUsers = () => User.bulkCreate(newUsers);
+const seedUsers = async () => await User.bulkCreate(newUsers);
 
 module.exports = seedUsers;

@@ -9,13 +9,13 @@ const seedAll = async () => {
     await sequelize.sync({ force: true });
     console.log("\n----- DATABASE SYNCED -----\n");
 
-    await seedUsers();
+    seedUsers();
     console.log("\n----- USERS SEEDED -----\n");
 
-    await seedPosts();
+    seedPosts();
     console.log("\n----- POSTS SEEDED -----\n");
 
-    await seedComments();
+    seedComments();
     console.log("\n----- COMMENTS SEEDED -----\n");
 
     process.exit(0);
