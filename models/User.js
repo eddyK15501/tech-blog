@@ -6,9 +6,8 @@ class User extends Model {
   async validatePassword(login) {
     try {
       return await bcrypt.compare(login, this.password);
-    } catch (error) {
-      console.log(error);
-      throw error;
+    } catch (err) {
+      console.log(err);
     }
   }
 }
