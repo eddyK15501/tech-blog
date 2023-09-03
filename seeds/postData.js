@@ -2,7 +2,7 @@ const { Post } = require('../models');
 
 const newPosts = [
   {
-    title: 'Handlbars.js',
+    title: 'Handlebars.js',
     content: 'Templating engines are quite outdated now days.',
     user_id: '2',
   },

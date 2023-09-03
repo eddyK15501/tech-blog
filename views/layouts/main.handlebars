@@ -9,10 +9,13 @@
 </head>
 
 <body>
+    <header class="banner">
+        <h2>Your Source for All Things Tech</h2>
+    </header>
     <nav>
-        <h1>
+        <h2>
             <a href="/">Tech Blog</a>
-        </h1>
+        </h2>
         <ul>
             <li>
                 <a href="">Home</a>
@@ -21,13 +24,20 @@
                 <a href="">Dashboard</a>
             </li>
             <li>
+            {{#if loggedIn}}
+            <a id="logout">Logout</a>
+            {{else}}
                 <a href="">Login</a>
             </li>
+            {{/if}}
         </ul>
     </nav>
 
-
-    {{{body}}}
+    <main>
+        <div class="blog-posts">
+            {{{body}}}
+        </div>
+    </main>
 
 </body>
 
