@@ -2,12 +2,12 @@
     <a href="/blog/{{id}}">
         <div class="blog-header">
             <h4>{{title}}</h4>
-            <p>Posted by <span>{{user.username}}</span> on </p>
+            <p>Posted by <span>{{user.username}}</span> on {{format_date createdAt}}</p>
         </div>
         <div class="blog-content">
-            <p>{{content}}</p>
+            <p class="blog-main-content">{{content}}</p>
             <div class="num-of-comments">
-                <p></p>
+                <p>0 comments</p>
             </div>
         </div>
     </a>

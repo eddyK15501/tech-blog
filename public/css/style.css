@@ -91,6 +91,18 @@ main {
 }
 
 .blog-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.blog-main-content {
     padding: 1rem 0.5rem;
 }
 
+.num-of-comments {
+    color: #cdcdcd;
+    font-size: 0.6rem;
+    min-width: 55px;
+    align-self: flex-end;
+}
