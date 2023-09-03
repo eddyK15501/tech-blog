@@ -9,11 +9,18 @@ router.get('/', async (req, res) => {
           model: User,
           attributes: ['username'],
         },
+        {
+          model: Comment,
+          include: {
+            model: User,
+            attributes: ['username'],
+          },
+        },
       ],
     });
 
     const blogPosts = dbPostData.map((blog) => {
-        return blog.get({ plain: true });
+      return blog.get({ plain: true });
     });
     console.log(blogPosts);
 
@@ -22,8 +29,16 @@ router.get('/', async (req, res) => {
     });
   } catch (err) {
     console.log(err);
-    res.status(500).json(err)
+    res.status(500).json(err);
   }
 });
+
+router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    res.render('login')
+})
 
 module.exports = router;

@@ -34,11 +34,11 @@ nav h2 {
 nav a {
     text-decoration: none;
     color: #fff;
-    transition: 0.2s ease-out;
+    transition: 0.3s ease-out;
 }
 
 nav a:hover {
-    color: rgb(42, 81, 120);
+    color: rgb(64, 115, 165);
 }
 
 nav ul {
@@ -66,6 +66,7 @@ main {
     font-size: 0.8rem;
     padding: 0.3rem;
     margin: 0 auto 1.5rem;
+    box-shadow: 3px 3px 7px #000;
 }
 
 .blog-card a {
