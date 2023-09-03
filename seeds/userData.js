@@ -7,8 +7,13 @@ const newUsers = () => [
     password: "qwer1234",
   },
   {
+    username: "ChanelBags<3",
+    email: "karen@gmail.com",
+    password: "qwer1234",
+  },
+  {
     username: "bruised4Skin",
-    email: "DungSlinger5@gmail.com",
+    email: "uncutwarriors@gmail.com",
     password: "qwer1234",
   },
   {
