@@ -6,6 +6,6 @@ const newComment = {
   post_id: "3",
 };
 
-const seedComments = async () => await Comment.create(newComment);
+const seedComments = () => Comment.create(newComment);
 
 module.exports = seedComments;

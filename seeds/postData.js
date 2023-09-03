@@ -19,6 +19,6 @@ const newPosts = [
   },
 ];
 
-const seedPosts = async () => await Post.bulkCreate(newPosts);
+const seedPosts = () => Post.bulkCreate(newPosts);
 
 module.exports = seedPosts;
