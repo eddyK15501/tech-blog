@@ -17,6 +17,11 @@ const newUsers = [
     password: "qwer1234",
   },
   {
+    username: "DungSlinger69",
+    email: "cornboy23@icloud.com",
+    password: "qwer1234",
+  },
+  {
     username: "conor_mcgregor",
     email: "uLitlf00knWeeZl@hotmail.com",
     password: "qwer1234",

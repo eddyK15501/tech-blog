@@ -15,8 +15,6 @@ router.get('/', async (req, res) => {
     const blogPosts = dbPostData.map((blog) => {
       return blog.get({ plain: true });
     });
-    // console.log(blogPosts);
-    // console.log(req.session)
 
     res.render('homepage', {
       blogPosts,
