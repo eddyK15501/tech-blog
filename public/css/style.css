@@ -59,13 +59,16 @@ main {
     padding: 2rem;
 }
 
+.main-blog-container {
+    max-width: 1100px;
+    margin: 0 auto 3rem;
+}
+
 .blog-card {
     width: 100%;
-    max-width: 1100px;
     border: 3px solid rgb(145, 200, 255);
     font-size: 1rem;
     padding: 0.3rem;
-    margin: 0 auto 1.5rem;
 }
 
 .blog-card a {
@@ -171,4 +174,37 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1.3rem;
+}
+
+.comment-card {
+    width: 97%;
+    max-width: 1000px;
+    border-left: 3px solid rgb(145, 200, 255);
+    border-right: 3px solid rgb(145, 200, 255);
+    border-bottom: 3px solid rgb(145, 200, 255);
+    font-size: 0.85rem;
+    padding: 0.1rem 0.1rem;
+    margin-left: auto;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgb(145, 200, 255);
+    padding: 0.4rem 0.3rem;
+    color: #fff;
+}
+
+.comment-header p {
+    color: #808080;
+    font-size: 0.7rem;
+}
+
+.comment-header span {
+    color: #fff;
+}
+
+.comment-main-text {
+    padding: 1rem 0.5rem;
 }

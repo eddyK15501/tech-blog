@@ -14,7 +14,7 @@ const signupFormHandler = async (event) => {
     const data = await response.json()
     // console.log(data)
     if (response.ok) {
-      document.location.replace("/dashboard");
+      document.location.replace("/");
     } else {
       alert(data.error);
     }

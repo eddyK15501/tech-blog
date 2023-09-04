@@ -9,12 +9,21 @@ router.get('/', async (req, res) => {
           model: User,
           attributes: ['username'],
         },
+        {
+            model: Comment,
+            include: {
+                model: User,
+                attributes: ['username']
+            }
+        },
       ],
     });
 
     const blogPosts = dbPostData.map((blog) => {
       return blog.get({ plain: true });
     });
+
+    console.log(blogPosts[2].comments)
 
     res.render('homepage', {
       blogPosts,

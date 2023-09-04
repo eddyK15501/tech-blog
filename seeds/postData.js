@@ -8,12 +8,12 @@ const newPosts = [
   },
   {
     title: 'Speaking of templating engines...',
-    content: 'Curse be to this damn thing. Challenging my indestructible wisdom.',
+    content: 'curse be to this damn thing...dare this thing challenging my indestructible wisdom.',
     user_id: '4',
   },
   {
     title: 'When designing an MVC pattern...',
-    content: 'Start with the model, followed by the controller, then the view.',
+    content: 'Start with the model, followed by the controller, then the view. Ya dig?',
     user_id: '3',
   },
   {
