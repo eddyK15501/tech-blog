@@ -7,6 +7,11 @@ const newPosts = [
     user_id: '2',
   },
   {
+    title: 'Speaking of templating engines...',
+    content: 'Curse be to this damn thing. Challenging my indestructible wisdom.',
+    user_id: '4',
+  },
+  {
     title: 'When designing an MVC pattern...',
     content: 'Start with the model, followed by the controller, then the view.',
     user_id: '3',
