@@ -10,7 +10,7 @@
 
 <body>
     <header class="banner">
-        <h2>Your Source for All Things Tech</h2>
+        <h2>Your Source for Tech Related Discussions</h2>
     </header>
     <nav>
         <h2>
@@ -20,13 +20,15 @@
             <li>
                 <a href="/">Home</a>
             </li>
+            {{#if loggedIn}}
             <li>
                 <a href="/dashboard">Dashboard</a>
             </li>
             <li>
-            {{#if loggedIn}}
-            <a id="logout">Logout</a>
+                <a id="logout">Logout</a>
+            </li>
             {{else}}
+            <li>
                 <a href="/login">Login</a>
             </li>
             {{/if}}

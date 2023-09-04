@@ -15,7 +15,7 @@ header.banner {
     background-color: dodgerblue;
     color: #fff;
     text-align: center;
-    padding: 3rem 0;
+    padding: 5rem 0;
 }
 
 nav {
@@ -23,7 +23,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: rgb(145, 200, 255);
-    padding: 0.4rem 2rem;
+    padding: 0.5rem 2rem;
 }
 
 nav h2 {
@@ -63,7 +63,7 @@ main {
     width: 100%;
     max-width: 1100px;
     border: 3px solid rgb(145, 200, 255);
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 0.3rem;
     margin: 0 auto 1.5rem;
 }
@@ -76,6 +76,7 @@ main {
 .blog-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: dodgerblue;
     padding: 0.5rem 0.3rem;
     color: #fff;
@@ -83,7 +84,7 @@ main {
 
 .blog-header p {
     color: #dedede;
-    font-size: 0.65rem;
+    font-size: 0.8rem;
 }
 
 .blog-header span {
@@ -97,19 +98,24 @@ main {
 }
 
 .blog-main-content {
-    padding: 1rem 0.5rem;
+    padding: 1.5rem 0.5rem;
 }
 
 .num-of-comments {
     color: #cdcdcd;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     min-width: 55px;
     align-self: flex-end;
 }
 
-.login-main-container {
+#logout {
+    cursor: pointer;
+}
+
+.form-main-container {
     max-width: 200px; 
-    margin: 0 auto;
+    margin: 2rem auto 0;
+    height: 80vh;
 }
 
 .login-form {
@@ -118,27 +124,20 @@ main {
     gap: 1.3rem;
 }
 
-.login-container {
+.form-container {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-#login-email {
+.input-field {
     padding: 0.2rem 0 0.2rem 0.1rem;
     border: 1px solid rgb(204, 204, 204);
     border-radius: 2px;
     outline: none;
 }
 
-#login-password {
-    padding: 0.2rem 0 0.2rem 0.1rem;
-    border: 1px solid rgb(204, 204, 204);
-    border-radius: 2px;
-    outline: none;
-}
-
-.login-form button {
+.form-button {
     cursor: pointer;
     padding: 0.5rem 0.7rem;
     border: none;
@@ -149,21 +148,27 @@ main {
     margin-bottom: 0.6rem;
 }
 
-.login-form button:hover {
+.form-button:hover {
     background-color: rgb(98, 176, 255);
 }
 
-.login-form button:active {
+.form-button:active {
     transform: scale(0.95);
 }
 
-#signup {
+.form-anchor {
     text-decoration: none;
     color: dodgerblue;
     font-size: 0.8rem;
     transition: 0.1s ease;
 }
 
-#signup:hover {
+.form-anchor:hover {
     color: rgb(165, 210, 255);
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
 }

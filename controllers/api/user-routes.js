@@ -17,7 +17,7 @@ router.post('/signup', async (req, res) => {
         });
     } catch (err) {
         console.log(err);
-        res.status(500).json(err);
+        res.status(500).json({ error: 'Password must be between 3-30 characters; Check if email address is valid;' });
     }
 });
 
