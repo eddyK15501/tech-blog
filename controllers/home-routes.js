@@ -10,11 +10,11 @@ router.get('/', async (req, res) => {
           attributes: ['username'],
         },
         {
-            model: Comment,
-            include: {
-                model: User,
-                attributes: ['username']
-            }
+          model: Comment,
+          include: {
+            model: User,
+            attributes: ['username'],
+          },
         },
       ],
     });
@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
       return blog.get({ plain: true });
     });
 
-    console.log(blogPosts[2].comments)
+    // console.log(blogPosts[2].comments)
 
     res.render('homepage', {
       blogPosts,
@@ -55,8 +55,8 @@ router.get('/post/:id', async (req, res) => {
                     }
                 ]
             });
-            const postComments = dbPostData.get({ plain: true });
-            res.render('comments', { postComments, loggedIn: req.session.loggedIn })
+            const singlePost = dbPostData.get({ plain: true });
+            res.render('post', { singlePost, loggedIn: req.session.loggedIn })
         } catch (err) {
             console.log(err);
             res.status(500).json(err)
@@ -65,20 +65,20 @@ router.get('/post/:id', async (req, res) => {
 })
 
 router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/');
-        return;
-    }
-    res.render('login')
-})
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  res.render('login');
+});
 
 router.get('/signup', (req, res) => {
-    if (req.session.loggedIn) {
-        res.redirect('/');
-        return;
-    }
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
 
-    res.render('signup');
-})
+  res.render('signup');
+});
 
 module.exports = router;

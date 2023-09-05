@@ -1,3 +1,4 @@
+{{#with singlePost}}
 <div class="main-blog-container">
     <div class="blog-card">
         <a href="/post/{{id}}">
@@ -8,19 +9,16 @@
             <div class="blog-content">
                 <p class="blog-main-content">{{content}}</p>
                 <div class="num-of-comments">
-                    <p>0 comments</p>
+                    <p>{{comments.length}} comments</p>
                 </div>
             </div>
         </a>
     </div>
+
     {{#each comments as |comment|}}
-    <div class="comment-card">
-        <div class="comment-header">
-            <p>Comment posted by <span>{{comment.user.username}}</span> on {{format_date comment.createdAt}}</p>
-        </div>
-        <div class="comment-text">
-            <p class="comment-main-text">{{comment.comment_text}}</p>
-        </div>
-    </div>
+    {{> blog-comments}}
     {{/each}}
+
+    <a href="" id="comment-btn">Add a comment</a>
 </div>
+{{/with}}

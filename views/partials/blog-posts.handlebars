@@ -1,0 +1,16 @@
+<div class="main-blog-container">
+    <div class="blog-card">
+        <a href="/post/{{id}}">
+            <div class="blog-header">
+                <h4>{{title}}</h4>
+                <p>Posted by <span>{{user.username}}</span> on {{format_date createdAt}}</p>
+            </div>
+            <div class="blog-content">
+                <p class="blog-main-content">{{content}}</p>
+                <div class="num-of-comments">
+                    <p>{{comments.length}} comments</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
