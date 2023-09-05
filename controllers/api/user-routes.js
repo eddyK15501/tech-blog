@@ -20,7 +20,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// GET ONE USER
+// GET SINGLE USER
 router.get("/:id", async (req, res) => {
   try {
     const dbUserData = await User.findOne({
