@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { User, Post, Comment } = require("../models");
+const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
@@ -31,32 +32,32 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/post/:id", async (req, res) => {
-  if (!req.session.loggedIn) {
-    res.redirect("/login");
-  } else {
-    try {
-      const dbPostData = await Post.findByPk(req.params.id, {
-        include: [
-          {
+router.get("/post/:id", withAuth, async (req, res) => {
+  try {
+    const dbPostData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ["username"],
+        },
+        {
+          model: Comment,
+          include: {
             model: User,
             attributes: ["username"],
           },
-          {
-            model: Comment,
-            include: {
-              model: User,
-              attributes: ["username"],
-            },
-          },
-        ],
-      });
-      const singlePost = dbPostData.get({ plain: true });
-      res.render("post", { singlePost, loggedIn: req.session.loggedIn });
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }
+        },
+      ],
+    });
+    const singlePost = dbPostData.get({ plain: true });
+    console.log(singlePost)
+    res.render("post", {
+      singlePost,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
   }
 });
 
@@ -73,7 +74,6 @@ router.get("/signup", (req, res) => {
     res.redirect("/");
     return;
   }
-
   res.render("signup");
 });
 
