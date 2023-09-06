@@ -38,6 +38,14 @@
     <main>
         <div class="main-container">
             {{{body}}}
+
+            {{#if isHomePage}}
+            <div class="homepage-btn-container">
+                <button id="post-btn">
+                    <a href="">+ Create New Post</a>    
+                </button>
+            </div>
+            {{/if}}
         </div>
     </main>
 

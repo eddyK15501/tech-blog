@@ -22,8 +22,11 @@ router.get("/", async (req, res) => {
     const blogPosts = dbPostData.map((blog) => {
       return blog.get({ plain: true });
     });
+    const isHomePage = req.url === '/'
+
     res.render("homepage", {
       blogPosts,
+      isHomePage,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
