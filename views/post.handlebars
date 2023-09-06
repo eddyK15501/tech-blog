@@ -15,10 +15,17 @@
         </a>
     </div>
 
-    {{#each comments as |comment|}}
-    {{> blog-comments}}
-    {{/each}}
+{{#each comments as |comment|}}
+{{> blog-comments}}
+{{/each}}
 
-    <a href="" id="comment-btn">Add a comment</a>
+<div class="new-comment-container">
+    <form class="new-comment-form">
+        <label for="new-comment">Comment on this post:</label>
+        <textarea name="" id="new-comment" cols="30" rows="10"></textarea>
+        <button type="submit" id="comment-btn">Add a comment</a>
+    </form>
+</div>
+
 </div>
 {{/with}}

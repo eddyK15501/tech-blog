@@ -67,7 +67,6 @@ main {
 .main-blog-container {
     max-width: 1100px;
     margin: 2rem auto 3rem;
-    cursor: pointer;
 }
 
 .blog-card {
@@ -75,6 +74,7 @@ main {
     border: 3px solid rgb(145, 200, 255);
     font-size: 1rem;
     padding: 0.3rem;
+    cursor: pointer;
 }
 
 .blog-card a {
@@ -213,12 +213,31 @@ main {
     padding: 1rem 0.5rem;
 }
 
-#comment-btn {
-    display: block;
-    width: 120px;
+.new-comment-container {
+    width: 50%;
+    margin: 5rem auto 0;
     text-align: center;
+}
+
+.new-comment-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#new-comment {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    resize: none;
+    padding: 0.1rem 0.1rem;
+}
+
+#comment-btn {
+    width: 120px;
     font-size: 0.85rem;
-    text-decoration: none;
     cursor: pointer;
     padding: 0.5rem 0.7rem;
     border: none;
@@ -226,13 +245,12 @@ main {
     background-color: rgb(24, 113, 202);
     color: #fff;
     transition: 0.1s ease;
-    margin: 2rem auto 0;
 }
-
+    
 #comment-btn:hover {
     background-color: rgb(98, 176, 255);
 }
-
+    
 #comment-btn:active {
     transform: scale(0.95);
 }
