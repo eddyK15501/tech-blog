@@ -51,7 +51,7 @@ router.get("/:id", async (req, res) => {
 });
 
 // POST ~ CREATE NEW USER
-router.post("/", async (req, res) => {
+router.post("/", withAuth, async (req, res) => {
   try {
     const { username, email, password } = req.body;
     const dbUserData = await User.create({
@@ -136,13 +136,13 @@ router.post("/login", async (req, res) => {
   });
 
   if (!dbUserData) {
-    res.status(400).json({ message: "No user found with that email address." });
+    res.status(400).json({ message: "Incorrect email address. Please try again." });
     return;
   }
   const validatePass = dbUserData.validatePassword(req.body.password);
 
   if (!validatePass) {
-    res.status(400).json({ message: "Incorrect password." });
+    res.status(400).json({ message: "Incorrect password. Please try again." });
     return;
   }
 
