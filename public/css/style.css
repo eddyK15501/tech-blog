@@ -350,3 +350,17 @@ main {
     transform: scale(0.95);
 }
 
+.dashboard-card {
+    max-width: 800px;
+    background-color: dodgerblue;
+    cursor: pointer;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+.dashboard-card a {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #fff;
+}
