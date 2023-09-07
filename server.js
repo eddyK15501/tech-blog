@@ -13,7 +13,9 @@ const PORT = process.env.PORT || 3001;
 
 const sess = {
   secret: 'secret session key',
-  cookie: {},
+  cookie: {
+    // maxAge: 30 * 60 * 1000,
+  },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({

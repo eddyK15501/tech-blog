@@ -8,7 +8,7 @@ const newPosts = [
   },
   {
     title: 'Speaking of templating engines...',
-    content: 'curse be to this damn thing...dare this thing challenging my indestructible wisdom.',
+    content: 'curse be to this damn thing...dare challenge my indestructible wisdom.',
     user_id: '4',
   },
   {

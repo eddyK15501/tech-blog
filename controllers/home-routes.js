@@ -64,6 +64,10 @@ router.get("/post/:id", withAuth, async (req, res) => {
   }
 });
 
+router.get('/newpost', (req, res) => {
+  res.render('hpnewpost');
+});
+
 router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/");

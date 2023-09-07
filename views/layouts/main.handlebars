@@ -40,11 +40,13 @@
             {{{body}}}
 
             {{#if isHomePage}}
+            {{#if loggedIn}}
             <div class="homepage-btn-container">
-                <button id="post-btn">
-                    <a href="">+ Create New Post</a>    
+                <button class="post-btn">
+                    <a href="/newpost">+ Create New Post</a>    
                 </button>
             </div>
+            {{/if}}
             {{/if}}
         </div>
     </main>
