@@ -41,7 +41,7 @@ router.get("/:id", async (req, res) => {
     });
     const postData = dbPostData.get({ plain: true })
 
-    res.render('dashboard-post', { postData, loggedIn: req.session.loggedIn })
+    res.render('edit-post', { postData, loggedIn: req.session.loggedIn })
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

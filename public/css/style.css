@@ -394,3 +394,95 @@ main {
     font-size: 1rem;
     padding: 0.1rem 0.1rem;
 }
+
+.edit-post-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: center;
+    flex-direction: column;
+}
+
+.edit-post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.edit-post-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#edit-title {
+    width: 500px;
+    outline: none;
+    font-size: 1rem;
+    padding: 0.1rem 0.1rem;
+}
+
+.edit-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#edit-content {
+    width: 500px;
+    resize: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    padding: 0.1rem 0.1rem;
+}
+
+.edit-btn-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#edit-btn {
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 0.7rem;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(24, 113, 202);
+    transition: 0.1s ease;
+    margin: 1rem 0 2rem;
+    color: #fff;
+}
+
+#edit-btn:hover {
+    background-color: rgb(98, 176, 255);
+}
+
+#edit-btn:active {
+    transform: scale(0.95);
+}
+
+#delete-btn {
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 0.7rem;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(24, 113, 202);
+    transition: 0.1s ease;
+    margin: 1rem 0 2rem;
+    color: #fff;
+}
+
+#delete-btn:hover {
+    background-color: rgb(98, 176, 255);
+}
+
+#delete-btn:active {
+    transform: scale(0.95);
+}
