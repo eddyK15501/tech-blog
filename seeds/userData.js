@@ -8,11 +8,11 @@ const newUsers = [
   },
   {
     username: "ChanelBags<3",
-    email: "karen@gmail.com",
+    email: "karenShmooves@gmail.com",
     password: "qwer1234",
   },
   {
-    username: "bruised4Skin",
+    username: "bruce4Skin",
     email: "uncutwarriors@gmail.com",
     password: "qwer1234",
   },

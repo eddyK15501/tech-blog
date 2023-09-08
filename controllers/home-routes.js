@@ -65,7 +65,7 @@ router.get("/post/:id", withAuth, async (req, res) => {
 });
 
 router.get('/newpost', (req, res) => {
-  res.render('hpnewpost');
+  res.render('hpnewpost', { loggedIn: req.session.loggedIn });
 });
 
 router.get("/login", (req, res) => {
