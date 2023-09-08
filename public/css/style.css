@@ -364,3 +364,33 @@ main {
     text-decoration: none;
     color: #fff;
 }
+
+.db-newpost-container {
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard-new-post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: center;
+    flex-direction: column;
+}
+
+#db-post-title {
+    width: 500px;
+    outline: none;
+    font-size: 1rem;
+    padding: 0.1rem 0.1rem;
+}
+
+#db-post-content {
+    width: 500px;
+    resize: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    padding: 0.1rem 0.1rem;
+}

@@ -7,7 +7,6 @@ router.get("/", async (req, res) => {
     const dbPostData = await Post.findAll({
       where: { user_id: req.session.user_id },
     });
-
     const data = dbPostData.map((post) => {
       return post.get({ plain: true });
     });
@@ -19,13 +18,34 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get('/newpost', (req, res) => {
+    res.render('dbnewpost', { loggedIn: req.session.loggedIn });
+})
+
 router.get("/:id", async (req, res) => {
   try {
+    const dbPostData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ["username"],
+        },
+        {
+          model: Comment,
+          include: {
+            model: User,
+            attributes: ["username"],
+          },
+        },
+      ],
+    });
+    const postData = dbPostData.get({ plain: true })
 
+    res.render('dashboard-post', { postData, loggedIn: req.session.loggedIn })
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
-})
+});
 
 module.exports = router;

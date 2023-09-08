@@ -1,8 +1,8 @@
-const hpNewPost = async (event) => {
+const dbNewPost = async (event) => {
   event.preventDefault();
 
-  const title = document.getElementById("hp-post-title").value.trim();
-  const content = document.getElementById("hp-post-content").value.trim();
+  const title = document.getElementById("db-post-title").value.trim();
+  const content = document.getElementById("db-post-content").value.trim();
 
   if (title && content) {
     try {
@@ -13,9 +13,9 @@ const hpNewPost = async (event) => {
       });
 
       if (response.ok) {
-        document.location.replace("/");
+        document.location.replace("/dashboard");
       } else {
-        alert(`Post could not be created.`);
+        alert(`Post was not be created.`);
       }
     } catch (err) {
       console.error("Error:", err);
@@ -26,4 +26,4 @@ const hpNewPost = async (event) => {
   }
 };
 
-document.getElementById("hp-newpost-btn").addEventListener("click", hpNewPost);
+document.getElementById("db-newpost-btn").addEventListener("click", dbNewPost);
