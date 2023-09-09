@@ -285,9 +285,10 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
+    margin: 2rem auto 0;
     text-align: center;
     flex-direction: column;
+    max-width: 550px;
 }
 
 .homepage-new-post h3 {
@@ -300,16 +301,18 @@ main {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    width: 100%;
 }
 
 .new-post-title {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
 }
 
 #hp-post-title {
-    width: 500px;
+    width: 100%;
     outline: none;
     font-size: 1rem;
     padding: 0.1rem 0.1rem;
@@ -319,10 +322,11 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
 }
 
 #hp-post-content {
-    width: 500px;
+    width: 100%;
     resize: none;
     outline: none;
     font-family: 'Roboto', sans-serif;
@@ -374,20 +378,21 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
+    margin: 2rem auto 0;
     text-align: center;
     flex-direction: column;
+    max-width: 550px;
 }
 
 #db-post-title {
-    width: 500px;
+    width: 100%;
     outline: none;
     font-size: 1rem;
     padding: 0.1rem 0.1rem;
 }
 
 #db-post-content {
-    width: 500px;
+    width: 100%;
     resize: none;
     outline: none;
     font-family: 'Roboto', sans-serif;
@@ -399,9 +404,10 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
+    margin: 2rem auto 0;
     text-align: center;
     flex-direction: column;
+    max-width: 550px
 }
 
 .edit-post {
@@ -410,29 +416,32 @@ main {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    width: 100%;
 }
 
 .edit-post-title {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
 }
 
 #edit-title {
-    width: 500px;
+    width: 100%;
     outline: none;
     font-size: 1rem;
     padding: 0.1rem 0.1rem;
 }
 
-.edit-content {
+.edit-post-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
 }
 
 #edit-content {
-    width: 500px;
+    width: 100%;
     resize: none;
     outline: none;
     font-family: 'Roboto', sans-serif;
@@ -445,6 +454,7 @@ main {
     gap: 2rem;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 #edit-btn {
@@ -485,4 +495,29 @@ main {
 
 #delete-btn:active {
     transform: scale(0.95);
+}
+
+@media screen and (max-width: 540px) {
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    nav ul {
+        gap: 2rem;
+    }
+
+    nav li {
+        margin: 0
+    }
+}
+
+@media screen and (max-width: 477px) {
+    .blog-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 }
